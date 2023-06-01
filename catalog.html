@@ -8,36 +8,36 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="logo" href="index.html">
-          <img src="#" alt="Седона">
+          <img src="#" alt="Логотип Седоны">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-active" href="#">О Седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог</a>
+            <a class="navigation-link navigation-link-active" href="#">Каталог</a>
           </li>
        </ul>
-       <ul class="navigation-list navigation-user">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">
+       <ul class="navigation-user-list">
+        <li class="navigation-user-item">
+          <a class="navigation-user-link" href="#">
             <span class="visually-hidden">
               Поиск
             </span>
           </a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">
+        <li class="navigation-user-item">
+          <a class="navigation-user-link" href="#">
            <span class="visually-hidden">
             Избранное
            </span>
            <sup class="icon-button-counter">12</sup>
           </a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-user-item">
           <a class="button navigation-item-button" href="#">
             <span class="button-text">Хочу сюда!</span>
           </a>
@@ -139,39 +139,20 @@
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <p class="section-title">Найдено гостиниц: 38</p>
+        <p class="section-title">Найдено гостиниц:<span>38</span></p>
         <h3 class="visually-hidden">Сортировка и отображение</h3>
-        <details class="select">
-          <summary class="select-button">Сначала дешёвые</summary>
-          <ul class="select-menu">
-            <li class="select-item select-item-active">
-              <a class="select-option" href="#">Сначала дешёвые</a>
-            </li>
-            <li class="select-item select-item-active">
-              <a class="select-option" href="#">Сначала дорогие</a>
-            </li>
-            <li class="select-item select-item-active">
-              <a class="select-option" href="#">Сначала популярные</a>
-            </li>
-          </ul>
-        </details>
-        <ul class="view-list">
-          <li class="view-item">
-            <a class="view-link">
-              <span class="visually-hidden">Карточками</span>
-            </a>
-          </li>
-          <li class="view-item">
-            <a class="view-link">
-              <span class="visually-hidden">Слайдами</span>
-            </a>
-          </li>
-          <li class="view-item ">
-            <a class="view-link">
-              <span class="visually-hidden">Списком</span>
-            </a>
-          </li>
-        </ul>
+        <form class="form-select" action="https://echo.htmlacademy.ru/" method="post">
+        <select name="select-hotels" id="hotels">
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="popular">Сначала популярные</option>
+          </select>
+        </form>
+        <div class="buttons-view">
+          <button class="visually-hidden">Карточками</button>
+          <button class="visually-hidden">Слайдами</button>
+          <button class="visually-hidden">Списками</button>
+        </div>
         <h3 class="visually-hidden">Список гостиниц</h3>
         <article class="card">
           <h4 class="card-title">
@@ -184,10 +165,10 @@
           </p>
           <a class="button" href="#">Подробнее</a>
 				  <a class="button" href="#">В избранное</a>
-				  <p class="star star-four">
+				  <div class="star star-four">
 					  <span class="visually-hidden">4 звезды</span>
-				  </p>
-				<p class="card-rating">Рейтинг: 8,5</p>
+				  </div>
+				<p class="card-rating">Рейтинг:<span>8,5</span></p>
         </article>
         <article class="card">
           <h4 class="card-title">
@@ -200,10 +181,10 @@
           </p>
           <a class="button" href="#">Подробнее</a>
 				  <a class="button button-active" href="#">В избранноm</a>
-				  <p class="star star-four">
+				  <div class="star star-four">
 					  <span class="visually-hidden">4 звезды</span>
-				  </p>
-				<p class="card-rating">Рейтинг: 9,2</p>
+				  </div>
+				<p class="card-rating">Рейтинг:<span>9,2</span></p>
         </article>
         <article class="card">
           <h4 class="card-title">
@@ -216,10 +197,10 @@
           </p>
           <a class="button" href="#">Подробнее</a>
 				  <a class="button" href="#">В избранное</a>
-				  <p class="star star-three">
+				  <div class="star star-three">
 					  <span class="visually-hidden">3 звезды</span>
-				  </p>
-				<p class="card-rating">Рейтинг: 6,9</p>
+				  </div>
+				<p class="card-rating">Рейтинг:<span>6,9</span></p>
         </article>
         <article class="card">
           <h4 class="card-title">
@@ -232,10 +213,10 @@
           </p>
           <a class="button" href="#">Подробнее</a>
 				  <a class="button" href="#">В избранное</a>
-				  <p class="star star-four">
+				  <div class="star star-two">
 					  <span class="visually-hidden">2 звезды</span>
-				  </p>
-				<p class="card-rating">Рейтинг: 5,0</p>
+				  </div>
+				<p class="card-rating">Рейтинг: <span>5,0</span></p>
         </article>
         <div class="pagination">
           <h3 class="visually-hidden">Список страниц</h3>
@@ -252,7 +233,7 @@
 						<a class="pagination-link" href="#">4</a>
 					</li>
 					<li class="pagination-item">
-						<a class="pagination-link" href="#">...</a>
+						<a class="pagination-link-ellipsis" href="#">...</a>
 					</li>
 					<li class="pagination-item">
 						<a class="pagination-link" href="#">10</a>
@@ -290,7 +271,7 @@
           </a>
         </li>
       </ul>
-      <a  class="footer-phone" href="+7812812-12-12">+7 (812) 812-12-12</a>
+      <a  class="footer-phone" href="+78128121212">+7 (812) 812-12-12</a>
       <a  class="footer-developer" href="https://htmlacademy.ru/">
         <img class="footer-developer-logo" src="#" alt="Разработано HTML Academy">
       </a>
