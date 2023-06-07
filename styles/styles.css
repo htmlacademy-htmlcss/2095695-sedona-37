@@ -1,3 +1,5 @@
+/* connect fonts */
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -15,6 +17,7 @@
 }
 
 
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -25,7 +28,6 @@ body {
 
 }
 
-li{list-style: none;}
 
 .navigation-link {
   font-weight: 700;
@@ -46,6 +48,7 @@ li{list-style: none;}
   width: 160px;
   height: 36px
 }
+
 .main-promo{
   /* width: 1200px; */
   height: 485px;
@@ -177,4 +180,64 @@ li{list-style: none;}
 .wrapper-inner{
   background:  #82B3D3 url('../images/main-header.jpg') no-repeat;
   color: #FFFFFF;
+}
+.breadcrumbs-item{
+   font-size: 16px;
+   line-height: 21px;
+ }
+.breadcrumbs-item-main {
+  background: url('../images/breadcrumbs_main.svg') no-repeat;
+}
+
+.filter-title{
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.section-title{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.button-cards::before{
+  content: url('../images/cards.svg');
+}
+.button-sliders::before{
+  content: url('../images/sliders.svg');
+
+}.button-lists::before{
+  content: url('../images/list.svg');
+}
+.card-link{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  color:#000000
+}
+.card-description{
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+.card-rating{
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333333;
+  background: #F2F2F2;
+  border-radius: 4px;
+}
+
+.subscribe-catalog{
+  background: #FFFFFF;
+
+}
+.subscribe-title-catalog{
+  color: #000000;
+}
+.subscribe-text-catalog{
+  color: #333333;
 }
