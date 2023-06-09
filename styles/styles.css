@@ -37,6 +37,7 @@ body {
   color: #000000;
 
 }
+
 /* Buttons */
 .button {
   background-color: #756157;
@@ -46,7 +47,7 @@ body {
   text-transform: uppercase;
 }
 
-.navigation-item-button{
+.navigation-item-button {
   width: 160px;
   height: 36px;
   font-weight: 700;
@@ -62,7 +63,8 @@ body {
   width: 376px;
   height: 52px;
 }
-.subscribe-button{
+
+.subscribe-button {
   border-radius: 0px 4px 4px 0px;
   align-items: center;
   padding: 8px 50px;
@@ -74,21 +76,34 @@ body {
   line-height: 36px;
 
 }
+
+
 .button-cards {
   background-image: url("../images/cards.svg");
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+
 }
 
 .button-sliders {
   background-image: url("../images/sliders.svg");
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+
 
 }
 
 .button-lists {
   background-image: url("../images/list.svg");
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+
 }
+
 .navigation-user-link-search {
   background-image: url("../images/search.svg");
   background-repeat: no-repeat;
+
 }
 
 .navigation-user-link-favourites {
@@ -129,10 +144,6 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-list li:nth-child(2n) {
-  background-color: rgba(131, 179, 211, 0.12);
-
-}
 
 .advantages-text-item {
   color: #333333;
@@ -307,4 +318,52 @@ body {
 
 .subscribe-text-catalog {
   color: #333333;
+}
+
+.star-four {
+  background:
+    url("../images/star.svg") no-repeat 0,
+    url("../images/star.svg") no-repeat 26px,
+    url("../images/star.svg") no-repeat 52px,
+    url("../images/star.svg") no-repeat 78px;
+
+}
+
+.star-three {
+  background:
+    url("../images/star.svg") no-repeat 0,
+    url("../images/star.svg") no-repeat 26px,
+    url("../images/star.svg") no-repeat 52px;
+}
+
+.star-two {
+  background:
+  url("../images/star.svg") no-repeat 0,
+  url("../images/star.svg") no-repeat 26px;
+}
+
+
+.pagination-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color:#FFFFFF;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  background: #82B3D3;
+  border-radius: 4px;
+
+}
+
+.pagination-link-ellipsis{
+  background-color: #FFFFFF;
+  color:#000000;
+
+}
+.pagination-link-active{
+  background: #F2F2F2;
+  color:#000000;
 }
