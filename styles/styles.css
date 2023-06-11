@@ -18,7 +18,6 @@
 
 html {
   height: 100%;
-
 }
 
 body {
@@ -31,8 +30,11 @@ body {
   line-height: 21px;
   background-color: #FFFFFF;
   color: #000000;
+}
 
-
+.logo {
+  height: 70px;
+  width: 139px;
 }
 
 .navigation {
@@ -50,7 +52,7 @@ body {
 .navigation-user-list {
   margin: 0;
   padding: 0;
-  width: 312px;
+  width: 412px;
   margin-left: auto;
 }
 
@@ -65,11 +67,13 @@ body {
 
 .main-container {
   flex-grow: 1;
+
 }
 
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .button {
@@ -107,10 +111,12 @@ body {
 }
 
 .main-promo {
+  display: block;
   min-height: 485px;
-  background: #82B3D3;
-  background-image: url("../images/welcome-food.svg"), url("../images/index-background.jpg");
-  background-repeat: no-repeat no-repeat;
+  background:
+    url("../images/welcome-food.svg") no-repeat 0 428px,
+    url("../images/index-background.jpg") no-repeat 0;
+  background-color: #82B3D3;
 }
 
 .advantages-list {
@@ -159,7 +165,7 @@ body {
 
 .advantages-item-transparent-blue,
 .privilege-item-home,
-.privilege-item-present{
+.privilege-item-present {
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -225,22 +231,7 @@ body {
   line-height: 26px;
 }
 
-.subscribe-button {
-  border-radius: 0 4px 4px 0;
-  align-items: center;
-  padding: 8px 50px;
-  background: #82B3D3;
-  height: 52px;
-  border: 1px solid #82B3D3;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
 
-}
-
-.input-field {
-  background-color: #F2F2F2;
-}
 
 
 .social-link-vkontakte {
@@ -345,20 +336,6 @@ body {
   background-color: #FFFFFF;
 
 }
-
-.subscribe-catalog {
-  background-color: #FFFFFF;
-
-}
-
-.subscribe-title-catalog {
-  color: #000000;
-}
-
-.subscribe-text-catalog {
-  color: #333333;
-}
-
 .star-four {
   background:
     url("../images/star.svg") no-repeat 0,
@@ -406,4 +383,47 @@ body {
 .pagination-link-active {
   background: #F2F2F2;
   color: #000000;
+}
+.subscribe-catalog {
+  background-color: #FFFFFF;
+  background-image: none;
+}
+
+.subscribe-title-catalog {
+  color: #000000;
+}
+
+.subscribe-text-catalog {
+  color: #333333;
+}
+.input-field {
+  background-color: #F2F2F2;
+  width: 452px;
+  height: 52px;
+  border-radius: 4px 0 0 4px;
+  border: 1px #F2F2F2 solid;
+
+}
+
+
+.subscribe-button {
+  border-radius: 0 4px 4px 0;
+  align-items: center;
+  padding: 8px 50px;
+  background: #82B3D3;
+  height: 52px;
+  border: 1px solid #82B3D3;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+
+}
+
+.page-footer-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+
 }
