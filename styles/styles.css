@@ -4,7 +4,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -12,12 +12,13 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 html {
   height: 100%;
+
 }
 
 body {
@@ -28,39 +29,7 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-.logo {
-  height: 70px;
-  width: 139px;
-}
-
-.navigation {
-  display: flex;
-  width: 1060px;
-  margin: 0 auto;
-}
-
-.navigation-list {
-  margin: 0;
-  padding: 0;
-  width: 439px;
-}
-
-.navigation-user-list {
-  margin: 0;
-  padding: 0;
-  width: 412px;
-  margin-left: auto;
-}
-
-.navigation-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  text-decoration: none;
+  background-color: #F2F2F2;
   color: #000000;
 
 }
@@ -74,7 +43,59 @@ body {
   width: 1200px;
   margin: 0 auto;
   text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
+ /* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+.logo {
+  height: 70px;
+  width: 139px;
+}
+.page-header{
+  padding: 0 70px;
+  background-color: #FFFFFF;
+}
+.navigation {
+  display: flex;
+  min-width: 1060px;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  min-width: 439px;
+}
+
+.navigation-user-list {
+  margin: 0;
+  padding: 0;
+  min-width: 312px;
+
+}
+
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
+
+}
+
+
 
 .button {
   background-color: #756157;
@@ -86,7 +107,7 @@ body {
 
 .navigation-item-button {
   width: 160px;
-  height: 36px;
+  min-height: 36px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -107,7 +128,7 @@ body {
 
 .navigation-item-button {
   width: 160px;
-  height: 36px
+  min-height: 36px
 }
 
 .main-promo {
@@ -123,6 +144,10 @@ body {
   margin: 0;
   padding: 0;
 
+}
+
+.advantages {
+  background-color: #FFFFFF;
 }
 
 .advantages-title {
@@ -163,16 +188,12 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item-transparent-blue,
-.privilege-item-home,
-.privilege-item-present {
+.item-transparent-blue {
   background: rgba(131, 179, 211, 0.12);
 }
 
 
-.privilege-title-item-home,
-.privilege-title-item-food,
-.privilege-title-item-present {
+.privilege-title-item {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -217,22 +238,8 @@ body {
   align-items: center;
   padding: 8px 50px;
   width: 376px;
-  height: 52px;
+  min-height: 52px;
 }
-
-.subscribe {
-  background: #82B3D3 url("../images/subscribe.jpg") no-repeat;
-  color: #FFFFFF;
-}
-
-.subscribe-text {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-}
-
-
-
 
 .social-link-vkontakte {
   background-image: url("../images/social/vk.svg");
@@ -336,26 +343,27 @@ body {
   background-color: #FFFFFF;
 
 }
+
 .star-four {
   background:
     url("../images/star.svg") no-repeat 0,
-    url("../images/star.svg") no-repeat 26px,
-    url("../images/star.svg") no-repeat 52px,
-    url("../images/star.svg") no-repeat 78px;
+    url("../images/star.svg") no-repeat 24px,
+    url("../images/star.svg") no-repeat 48px,
+    url("../images/star.svg") no-repeat 72px;
 
 }
 
 .star-three {
   background:
     url("../images/star.svg") no-repeat 0,
-    url("../images/star.svg") no-repeat 26px,
-    url("../images/star.svg") no-repeat 52px;
+    url("../images/star.svg") no-repeat 24px,
+    url("../images/star.svg") no-repeat 48px;
 }
 
 .star-two {
   background:
     url("../images/star.svg") no-repeat 0,
-    url("../images/star.svg") no-repeat 26px;
+    url("../images/star.svg") no-repeat 24px;
 }
 
 
@@ -384,9 +392,24 @@ body {
   background: #F2F2F2;
   color: #000000;
 }
+
+.subscribe {
+  background: #82B3D3 url("../images/subscribe.jpg") no-repeat;
+  color: #FFFFFF;
+  background-size: cover;
+  padding: 94px 200px;
+}
+
 .subscribe-catalog {
   background-color: #FFFFFF;
   background-image: none;
+
+}
+
+.subscribe-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .subscribe-title-catalog {
@@ -396,23 +419,27 @@ body {
 .subscribe-text-catalog {
   color: #333333;
 }
+
 .input-field {
   background-color: #F2F2F2;
   width: 452px;
-  height: 52px;
+  min-height: 52px;
   border-radius: 4px 0 0 4px;
-  border: 1px #F2F2F2 solid;
+  border: none;
+  margin-right: -5px;
+  box-sizing: border-box;
 
 }
-
-
+.subscribe-form{
+  height: 52px;
+}
 .subscribe-button {
   border-radius: 0 4px 4px 0;
   align-items: center;
-  padding: 8px 50px;
+  padding: 8px 30px;
   background: #82B3D3;
-  height: 52px;
-  border: 1px solid #82B3D3;
+  min-height: 52px;
+  border: none;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -422,8 +449,5 @@ body {
 .page-footer-container {
   width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 72px;
 
 }
