@@ -605,10 +605,13 @@ body {
 
 
 .button-detailed {
+
   padding: 8px 26px;
   font-weight: 700;
   width: 140px;
+
 }
+
 .button-choose {
   padding: 8px 20px;
   background-color: #82B3D3;
@@ -616,13 +619,16 @@ body {
   font-size: 16px;
   line-height: 20px;
   width: 140px;
+
 }
-.button-active{
+
+.button-active {
   font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-padding: 8px 18px;
-background: #7DB54F;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 18px;
+  background: #7DB54F;
+
 }
 
 .star-four {
@@ -646,13 +652,6 @@ background: #7DB54F;
     url("../images/star.svg") no-repeat 0,
     url("../images/star.svg") no-repeat 24px;
 }
-
-
-
-
-
-
-
 
 
 .pagination-list {
