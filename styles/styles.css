@@ -123,7 +123,7 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-   font-weight: 700;
+  font-weight: 700;
   border: none;
 }
 
@@ -192,42 +192,46 @@ body {
 .advantages-list {
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-template-rows: repeat(3, 385px);
+  grid-auto-rows: minmax(385px, auto);
   margin: 0;
   padding: 0;
   list-style-type: none;
   margin-bottom: 64px;
 }
 
+.advantages-image {
+  height: 100%;
+}
+
 .item-blue-first {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
+  grid-column: 1 / -1;
   background-color: #82B3D3;
   color: #FFFFFF;
 }
-.item-transparent-blue{
+
+.item-transparent-blue {
   background: rgba(131, 179, 211, 0.12);
 }
+
 .item-transparent-blue-left {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+
 }
 
 .advantages-item-light-blue {
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
   background-color: rgba(131, 179, 211, 0.2);
 
 }
 
 .item-transparent-blue-right {
   grid-column: 3 / 4;
-  grid-row: 2 / 3;
+
 
 }
 
 .item-blue-last {
-  grid-column: 1 / 4;
+  grid-column: 1 / -1;
   grid-row: 3 / 4;
   background-color: #82B3D3;
   color: #FFFFFF;
@@ -245,6 +249,7 @@ body {
 
 .advantages-item {
   padding: 102px 85px;
+  ;
 }
 
 .item-blue-first,
@@ -305,7 +310,8 @@ body {
 }
 
 .privilege-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   min-height: 400px;
   list-style-type: none;
   margin: 0;
@@ -550,7 +556,7 @@ body {
 .button-submit {
   background: #82B3D3;
   margin-bottom: 40px;
-   padding: 8px 50px;
+  padding: 8px 50px;
 }
 
 .button-reset {
@@ -566,9 +572,11 @@ body {
 }
 
 .select-hotels {
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  background-color: #FFFFFF;
   color: #333333;
   width: 292px;
   height: 49px;
@@ -619,7 +627,7 @@ body {
 .list-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-   column-gap: 20px;
+  column-gap: 20px;
   row-gap: 10px;
   padding: 0 70px;
   margin-bottom: 80px;
@@ -648,6 +656,7 @@ body {
 }
 
 .card-img {
+  display: block;
   grid-area: image;
   max-width: 300px;
 }
@@ -668,12 +677,15 @@ body {
   color: #333333;
   grid-area: description;
 }
-.card-description-title{
-text-align: left;
+
+.card-description-title {
+  text-align: left;
 }
-.card-description-price{
-text-align:right;
+
+.card-description-price {
+  text-align: right;
 }
+
 .card-rating {
   margin: 0;
   grid-area: rating;
@@ -686,7 +698,7 @@ text-align:right;
   border-radius: 4px;
   width: 140px;
   padding: 9px 0;
-  margin-left:auto;
+  margin-left: auto;
 }
 
 
@@ -694,7 +706,7 @@ text-align:right;
 .button-detailed {
   grid-area: button-detailed;
   width: 140px;
- padding: 8px 0;
+  padding: 8px 0;
 
 }
 
@@ -744,7 +756,7 @@ text-align:right;
 .pagination-list {
   display: flex;
   margin: 0;
-  padding:0;
+  padding: 0;
   list-style-type: none;
   padding-left: 70px;
   margin-bottom: 60px;
