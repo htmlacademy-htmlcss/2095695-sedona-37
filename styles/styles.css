@@ -298,7 +298,7 @@ body {
 }
 
 .advantages-block {
-  padding: 0 355px;
+  padding: 0 274px;
 }
 
 .advantages-text-item {
@@ -357,18 +357,20 @@ body {
 }
 
 .search-title {
+  margin: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .search-text {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  margin-bottom: 54px;
+  padding-bottom: 54px;
   text-align: center;
 }
 
