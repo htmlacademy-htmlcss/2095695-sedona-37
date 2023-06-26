@@ -122,6 +122,8 @@ body {
 }
 
 .button {
+
+  font-family: inherit;
   display: inline-block;
   background-color: #756157;
   border-radius: 4px;
@@ -428,7 +430,7 @@ body {
   background: url("../images/main-header.jpg")no-repeat;
   color: #FFFFFF;
   padding: 0 70px;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
 }
 
 
@@ -620,10 +622,11 @@ input[type=number] {
   display: flex;
   justify-content: space-between;
   padding: 0 70px;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .select-hotels {
+
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -635,6 +638,12 @@ input[type=number] {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   padding: 11px 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('../images/select.svg');
+  background-repeat: no-repeat;
+  background-position: 258px 20px;
 }
 
 .section-title {
@@ -758,6 +767,7 @@ input[type=number] {
 
 
 .button-detailed {
+  font-family: inherit;
   grid-area: button-detailed;
   width: 140px;
   padding: 8px 0;
@@ -765,22 +775,19 @@ input[type=number] {
 }
 
 .button-choose {
+  font-family: inherit;
   grid-area: button-choose;
   background-color: #82B3D3;
   width: 140px;
-  padding: 8px 0;
 
 }
 
 .button-active {
-
   background: #7DB54F;
-
 }
 
 .star {
   grid-area: star;
-
 }
 
 .star-four {
