@@ -424,7 +424,7 @@ body {
 
 .wrapper-inner {
   background-color: #81B3D3;
-  background: url("../images/main-header.jpg")no-repeat;
+  background: url("../images/main-header.jpg") no-repeat;
   background-size: cover;
   color: #FFFFFF;
   padding: 0 70px;
@@ -511,22 +511,19 @@ body {
 .filter-item {
   padding-bottom: 16px;
 }
-.control{
-  position: relative;
-}
-.control-input{
-   position: absolute;
-  opacity: 0;
-}
-.control-label{
+
+.control-label {
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 19px;
   line-height: 24px;
+  cursor: pointer;
 }
+
 .control-label::before {
   background-color: #ffffff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .control-label::after {
@@ -534,20 +531,26 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url("../images/checkbox.svg");
+  cursor: pointer;
 }
+
 .control-input:checked + .control-label::after {
   display: block;
 }
-.control-label::before, .control-label::after {
+
+.control-label::before,
+.control-label::after {
   content: "";
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   height: 20px;
   margin-top: 2px;
 }
+
 .control-input[type="radio"] + .control-label::before {
   border-radius: 50%;
 }
+
 .control-input[type="radio"] + .control-label::after {
   background-color: #3f5e72;
   background-image: none;
@@ -640,6 +643,7 @@ input[type=number] {
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 
@@ -665,7 +669,7 @@ input[type=number] {
 .catalog-view {
   display: flex;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0 70px;
   margin-bottom: 40px;
@@ -704,7 +708,9 @@ input[type=number] {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
-
+.button-view-active{
+  border: 2px solid #000;
+}
 .button-cards {
   background-image: url("../images/cards.svg");
   background-repeat: no-repeat;
@@ -767,9 +773,11 @@ input[type=number] {
   grid-area: image;
   max-width: 300px;
 }
-.card-image-link{
-  display:block;
+
+.card-image-link {
+  display: block;
 }
+
 .card-title {
   grid-area: title;
   text-align: left;
@@ -834,27 +842,29 @@ input[type=number] {
 
 .star {
   grid-area: star;
+  background-position-x: center;
 }
 
 .star-four {
-  background:
-    url("../images/star.svg") no-repeat 0,
-    url("../images/star.svg") no-repeat 24px,
-    url("../images/star.svg") no-repeat 48px,
-    url("../images/star.svg") no-repeat 72px;
+  background: url("../images/star.svg");
+  width: 96px;
+  background-repeat: repeat-x;
+  background-position-y: center;
+
 }
 
 .star-three {
-  background:
-    url("../images/star.svg") no-repeat 0,
-    url("../images/star.svg") no-repeat 24px,
-    url("../images/star.svg") no-repeat 48px;
+  background: url("../images/star.svg") no-repeat;
+  width: 72px;
+  background-repeat: repeat-x;
+  background-position-y: center;
 }
 
 .star-two {
-  background:
-    url("../images/star.svg") no-repeat 0,
-    url("../images/star.svg") no-repeat 24px;
+  background: url("../images/star.svg") no-repeat;
+  width: 48px;
+  background-repeat: repeat-x;
+  background-position-y: center;
 }
 
 
@@ -915,7 +925,7 @@ input[type=number] {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .subscribe-text {
@@ -924,7 +934,7 @@ input[type=number] {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  padding-bottom: 54px;
+  margin-bottom: 54px;
 }
 
 
