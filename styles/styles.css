@@ -18,7 +18,6 @@
 
 html {
   height: 100%;
-
 }
 
 body {
@@ -29,12 +28,10 @@ body {
   line-height: 21px;
   background-color: #F2F2F2;
   color: #000000;
-
 }
 
 .main-container {
   flex-grow: 1;
-
 }
 
 .page-container {
@@ -95,9 +92,9 @@ body {
 .navigation-user-list {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0;
   min-width: 312px;
-  flex-wrap: wrap;
   list-style-type: none;
 }
 
@@ -428,6 +425,7 @@ body {
 .wrapper-inner {
   background-color: #81B3D3;
   background: url("../images/main-header.jpg")no-repeat;
+  background-size: cover;
   color: #FFFFFF;
   padding: 0 70px;
   margin-bottom: 50px;
@@ -512,6 +510,52 @@ body {
 
 .filter-item {
   padding-bottom: 16px;
+}
+.control{
+  position: relative;
+}
+.control-input{
+   position: absolute;
+  opacity: 0;
+}
+.control-label{
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 19px;
+  line-height: 24px;
+}
+.control-label::before {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-label::after {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../images/checkbox.svg");
+}
+.control-input:checked + .control-label::after {
+  display: block;
+}
+.control-label::before, .control-label::after {
+  content: "";
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 20px;
+  margin-top: 2px;
+}
+.control-input[type="radio"] + .control-label::before {
+  border-radius: 50%;
+}
+.control-input[type="radio"] + .control-label::after {
+  background-color: #3f5e72;
+  background-image: none;
+  background-clip: content-box;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
 .filter-fieldset {
@@ -621,12 +665,13 @@ input[type=number] {
 .catalog-view {
   display: flex;
   justify-content: space-between;
+  flex-wrap:wrap;
+  align-items: center;
   padding: 0 70px;
   margin-bottom: 40px;
 }
 
 .select-hotels {
-
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -634,16 +679,17 @@ input[type=number] {
   background-color: #FFFFFF;
   color: #333333;
   width: 292px;
-  height: 49px;
+  min-height: 49px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   padding: 11px 20px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-image: url('../images/select.svg');
   background-repeat: no-repeat;
-  background-position: 258px 20px;
+  background-position: 258px center;
+  margin: 0 70px 0 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .section-title {
@@ -657,8 +703,6 @@ input[type=number] {
   background-position: center;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-
-
 }
 
 .button-cards {
@@ -689,7 +733,7 @@ input[type=number] {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
-  row-gap: 10px;
+  row-gap: 20px;
   padding: 0 70px;
   margin-bottom: 80px;
 }
@@ -723,7 +767,9 @@ input[type=number] {
   grid-area: image;
   max-width: 300px;
 }
-
+.card-image-link{
+  display:block;
+}
 .card-title {
   grid-area: title;
   text-align: left;
@@ -897,7 +943,8 @@ input[type=number] {
 
 .input-field {
   background-color: #F2F2F2;
-  width: 390px;
+  box-sizing: border-box;
+  width: 452px;
   border-radius: 4px 0 0 4px;
   border: none;
   font-weight: 400;
@@ -935,6 +982,9 @@ input[type=number] {
 }
 
 .footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 142px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -943,25 +993,10 @@ input[type=number] {
 
 .social-link {
   display: flex;
-  background-position: center;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
-}
-
-.social-link-vkontakte {
-  background-image: url("../images/social/vk.svg");
-  background-repeat: no-repeat;
-
-}
-
-.social-link-telegram {
-  background-image: url("../images/social/telegram.svg");
-  background-repeat: no-repeat;
-}
-
-.social-link-youtube {
-  background-image: url("../images/social/youtube.svg");
-  background-repeat: no-repeat;
 }
 
 .footer-social-item {
