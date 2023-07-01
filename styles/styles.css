@@ -706,9 +706,11 @@ input[type=number] {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
-.button-view-active{
+
+.button-view-active {
   border: 2px solid #000;
 }
+
 .button-cards {
   background-image: url("../images/cards.svg");
   background-repeat: no-repeat;
@@ -1030,44 +1032,195 @@ input[type=number] {
   height: 100%;
   border-radius: 30px;
   background: #FFFFFF;
-
-
-
-
 }
+
+/* Modal */
+
 .modal {
   position: relative;
   margin: auto;
   padding: 40px;
-  background-color: pink;
+  background-color: #FFFFFF;
 }
-.modal-auth {
+
+.modal-date {
+  box-sizing: border-box;
   width: 717px;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-
+  padding: 64px 70px;
+  text-align: left;
 }
 
 .modal-close-button {
   position: absolute;
-  padding: 0;
-  top: 0;
-  right: 0;
-  width: 56px;
-  height: 44px;
-  background-color: #ffffff;
+  padding: 16px;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
   border: none;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
 }
-.modal-title{
-  color: #000;
-font-size: 30px;
-font-family: inherit;
-font-style: normal;
-font-weight: 700;
-line-height: 36px;
-text-transform: uppercase;
+.modal-close-button:hover,
+.modal-close-button:active{
+background-color: #E6E6E6;
 }
+.modal-close-button:focus{
+  outline: 3px solid #83B3D3;
+}
+.image-close:active{
+  opacity: 0.3;
+}
+.modal-title {
+  color: #000;
+  font-size: 30px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+.label-field {
+  color: #000;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.input-field {
+  width: 440px;
+  padding: 12px 20px;
+  color: #000;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 24px;
+  border-radius: 4px;
+}
+
+.image-date {
+  position: absolute;
+  right: 20px;
+}
+
+.input-number {
+  padding: 14px 10px;
+  width: 31px;
+  height: 48px;
+  border-radius: 0;
+  order: 2;
+}
+
+.label-number {
+  padding-right: 46px;
+  align-self: center;
+}
+
+.search-date-button {
+  width: 577px;
+  padding: 18px 77px;
+  border-radius: 10px;
+  background: #83B3D3;
+  font-size: 20px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.date-form-field::placeholder {
+  font-weight: 400;
+}
+
+.field-search-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-bottom: 48px;
+}
+
+.field-group {
+  position: relative;
+}
+
+.message {
+  position: absolute;
+  top: 50px;
+  right: 90px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333;
+
+}
+
+.error-message {
+  color: #FF5757;
+  right: 140px;
+}
+
+.button-plus-minus {
+  padding: 14px 10px;
+  border-radius: 0;
+  background-color: rgba(242, 242, 242, 1);
+  width: 40px;
+  height: 48px;
+
+}
+.button-plus-minus:hover path {
+ fill: #000000;
+ fill-opacity: 1;
+
+}
+.image-plus-minus{
+border: 3px solid transparent;
+border-radius: 4px;
+
+}
+.image-plus-minus:focus path{
+  border: 3px solid #82B3D3;
+}
+.image-plus-minus:active path{
+opacity: 0.2;
+}
+.field-group-number {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  margin-bottom: 48px;
+}
+
+.field-group-people {
+  display: flex;
+  align-items: flex-end;
+}
+.label-number-child{
+  position: relative;
+  padding-right: 82px;
+}
+.image-info{
+  position: absolute;
+  right: 45px;
+}
+.button-minus {
+  order: 1;
+  border-radius: 4px 0 0 4px;
+}
+
+.button-plus {
+  order: 4;
+  border-radius: 0 4px 4px 0;
+}
+/* класс у картинки плюс-минус */
