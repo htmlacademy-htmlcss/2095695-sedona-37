@@ -439,10 +439,10 @@ body {
   list-style-type: none;
   margin-bottom: 40px;
 }
-
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
+  margin-left: 10px;
 }
 
 .breadcrumbs-link-main {
@@ -452,19 +452,24 @@ body {
   height: 12px;
 
 }
-
-.breadcrumbs-link {
-  padding-left: 11px;
-}
-
-.breadcrumbs-link::before {
-  content: url('../images/arrow.svg');
+.breadcrumbs-item::before{
+  content:" ";
+  display: inline-block;
+  background: url("../images/arrow.svg") no-repeat;
   height: 10px;
   width: 6px;
-  padding-right: 11px;
-
+  padding-left: 10px;
 }
-
+.breadcrumbs-link{
+  text-decoration: none;
+  color:#FFFFFF;
+}
+.breadcrumbs-link[href]:hover{
+  opacity: 0.6;
+}
+.breadcrumbs-link[href]:active{
+ opacity: 0.3;
+}
 
 .filter {
   display: flex;
@@ -741,7 +746,7 @@ input[type=number] {
   column-gap: 20px;
   row-gap: 20px;
   padding: 0 70px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 
@@ -846,6 +851,14 @@ input[type=number] {
   background-position-x: center;
 }
 
+.star-five {
+  background: url("../images/star.svg");
+  width: 120px;
+  background-repeat: repeat-x;
+  background-position-y: center;
+
+}
+
 .star-four {
   background: url("../images/star.svg");
   width: 96px;
@@ -868,13 +881,19 @@ input[type=number] {
   background-position-y: center;
 }
 
-
+.star-one {
+  background: url("../images/star.svg") no-repeat;
+  width: 24px;
+  background-repeat: repeat-x;
+  background-position-y: center;
+}
 .pagination-list {
   display: flex;
-  margin: 0;
   padding: 0;
+  padding-top: 40px;
+  border-top: 1px solid  #E6E6E6;
+  margin: 0 70px;
   list-style-type: none;
-  padding-left: 70px;
   margin-bottom: 60px;
   gap: 8px;
 }
@@ -1014,7 +1033,10 @@ input[type=number] {
   display: inline-flex;
 
 }
-
+.image-social:hover path,
+.image-social:focus path{
+  fill: #68A2CA;
+}
 .footer-phone {
   font-size: 40px;
   line-height: 40px;
@@ -1030,16 +1052,15 @@ input[type=number] {
   z-index: 2;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background: #FFFFFF;
+  background: rgba(242, 242, 242, 0.80);
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
@@ -1120,17 +1141,12 @@ input[type=number] {
   border-radius: 4px;
 }
 
-.image-date {
-  position: absolute;
-  right: 20px;
-}
 
 .input-number {
   padding: 14px 10px;
   width: 31px;
   height: 48px;
   border-radius: 0;
-  order: 2;
 }
 
 .label-number {
@@ -1149,7 +1165,9 @@ input[type=number] {
   line-height: 24px;
   text-transform: uppercase;
 }
-
+.date-form-field{
+  background: #F2F2F2 url(../images/date.svg) no-repeat 400px center;
+}
 .date-form-field::placeholder {
   font-weight: 400;
 }
@@ -1169,7 +1187,7 @@ input[type=number] {
 .message {
   position: absolute;
   top: 50px;
-  right: 90px;
+  left: 155px;
   font-size: 16px;
   font-family: inherit;
   font-weight: 400;
@@ -1180,9 +1198,10 @@ input[type=number] {
 
 .error-message {
   color: #FF5757;
-  right: 140px;
 }
-
+.message-close{
+  display: none;
+}
 .button-plus-minus {
   padding: 14px 10px;
   border-radius: 0;
@@ -1201,6 +1220,10 @@ input[type=number] {
 .image-plus-minus:focus {
   border-radius: 4px;
   outline: 3px solid #82B3D3;
+}
+.image-plus-minus:focus path{
+  fill:#000000;
+  fill-opacity: 1;
 }
 
 .image-plus-minus:active path {
@@ -1221,12 +1244,10 @@ input[type=number] {
 }
 
 .button-minus {
-  order: 1;
   border-radius: 4px 0 0 4px;
 }
 
 .button-plus {
-  order: 4;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1242,6 +1263,7 @@ input[type=number] {
   padding: 0;
   margin: 0;
   display: block;
+  cursor: pointer;
 }
 
 .tooltip-text {
@@ -1284,7 +1306,6 @@ input[type=number] {
   width: 19px;
   height: 9px;
   position: absolute;
-  /* transform: rotate(0deg); */
   bottom: 100%;
   left: 0;
   right: 0;
