@@ -141,12 +141,6 @@ body {
 .button:active {
   color: rgba(255, 255, 255, 0.3);
 }
-
-.button[disabled] {
-  background-color: rgba(229, 229, 229, 1);
-  color: rgba(255, 255, 255, 1);
-}
-
 .button-brown:hover,
 .button-brown:focus {
   background-color: rgba(97, 80, 72, 1);
@@ -156,7 +150,11 @@ body {
   background-color: rgba(117, 97, 87, 1);
   color: rgba(255, 255, 255, 0.3);
 }
-
+.button[disabled] {
+  background-color: rgba(229, 229, 229, 1);
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+}
 .navigation-item-button {
   display: block;
   padding: 8px 34px;
@@ -554,9 +552,11 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-  padding-right: 38px;
-}
 
+}
+.catalog-filter-group-radio{
+  margin-right: 70px;
+}
 .section-title {
   font-weight: 700;
   font-size: 30px;
@@ -566,7 +566,6 @@ body {
 
 .catalog-filter {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   padding-bottom: 50px;
@@ -662,6 +661,7 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
+  margin-left:auto;
 }
 
 .range-input {
@@ -702,6 +702,8 @@ input[type=number] {
   font-size: 18px;
   line-height: 24px;
   padding: 12px 0 12px 20px;
+  box-sizing: border-box;
+  width: 143px;
 }
 
 .range-field {
@@ -761,6 +763,7 @@ input[type=number] {
   flex-basis: 191px;
   align-self: flex-start;
   padding-top: 55px;
+  margin-left: 70px;
 }
 
 .button-submit {
@@ -788,6 +791,11 @@ input[type=number] {
 .button-reset:active {
   background-color: transparent;
   opacity: 0.3;
+}
+.button-reset[disabled]{
+  color: #FFFFFF;
+  opacity: 0.1;
+  background-color: transparent;
 }
 
 .catalog-view {
@@ -820,13 +828,14 @@ input[type=number] {
   -moz-appearance: none;
 }
 
-.select-hotels:hover,
-.select-hotels:focus {
+.select-hotels:not[disabled]:hover,
+.select-hotels:not[disabled]:focus {
   border-color: rgba(104, 162, 202, 1);
   outline: none;
 }
 
 .select-hotels[disabled] {
+  border: 2px solid rgba(0, 0, 0, 0.30);
   opacity: 0.3;
 }
 
@@ -853,15 +862,16 @@ input[type=number] {
   border-color: #000;
 }
 
-.button-view-icon:not(.button-view-active):focus {
+.button-view-icon:focus {
   border-color: rgba(104, 162, 202, 1);
   outline: none;
 }
-
 .button-view-icon:active {
   border-color: #000;
 }
-
+.button-view-active:focus{
+  border-color: #000;
+}
 
 .button-cards {
   background-image: url("../images/cards.svg");
@@ -976,12 +986,12 @@ input[type=number] {
   background-color: rgba(125, 181, 79, 1);
 }
 
-.button-active-green:hover,
-.button-active-green:focus {
+.button-active-green:not[disabled]:hover,
+.button-active-green:not[disabled]:focus {
   background-color: rgba(108, 158, 66, 1);
 }
 
-.button-active-green:active {
+.button-active-green:not[disabled]:active {
   background-color: rgba(125, 181, 79, 1);
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1051,6 +1061,10 @@ input[type=number] {
 .pagination-link-ellipsis {
   background-color: #FFFFFF;
   color: #000000;
+  font-size: 22px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 .pagination-link-active {
@@ -1063,7 +1077,6 @@ input[type=number] {
   color: #FFFFFF;
   background-size: cover;
   padding: 107px 258px 107px 258px;
-  margin-top: 5px;
 }
 
 .subscribe-catalog {
@@ -1120,6 +1133,11 @@ input[type=number] {
 
 .input-field::placeholder {
   opacity: 0.6;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: inherit;
 }
 
 
@@ -1460,6 +1478,7 @@ input[type=number] {
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
+  opacity: 0.6px;
   display: block;
 }
 
