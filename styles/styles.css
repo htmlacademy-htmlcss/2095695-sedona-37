@@ -141,6 +141,7 @@ body {
 .button:active {
   color: rgba(255, 255, 255, 0.3);
 }
+
 .button-brown:hover,
 .button-brown:focus {
   background-color: rgba(97, 80, 72, 1);
@@ -150,11 +151,13 @@ body {
   background-color: rgba(117, 97, 87, 1);
   color: rgba(255, 255, 255, 0.3);
 }
+
 .button[disabled] {
   background-color: rgba(229, 229, 229, 1);
   color: rgba(255, 255, 255, 1);
   outline: none;
 }
+
 .navigation-item-button {
   display: block;
   padding: 8px 34px;
@@ -183,8 +186,8 @@ body {
 
 .icon-button-counter {
   position: relative;
-  top: -10px;
-  right: -6px;
+  top: -7px;
+  right: -5px;
   min-width: 20px;
   height: 20px;
   padding: 4px 5px;
@@ -287,7 +290,7 @@ body {
 }
 
 .advantages-item {
-  padding: 110px 85px;
+  padding: 112px 85px;
 
 }
 
@@ -426,12 +429,12 @@ body {
 }
 
 .privilege-item {
-  padding: 151px 81px 35px 81px;
+  padding: 154px 81px 35px 81px;
   background-position: top 80px center;
 }
 
 .search {
-  padding: 80px 304px;
+  padding: 80px 304px 96px;
   background-color: #FFFFFF
 }
 
@@ -473,7 +476,7 @@ body {
   padding: 0;
   margin: 0;
   padding-top: 35px;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   text-align: left;
 }
 
@@ -483,7 +486,7 @@ body {
   background-size: cover;
   color: #FFFFFF;
   padding: 0 70px;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
 }
 
 .breadcrumbs {
@@ -542,6 +545,9 @@ body {
 }
 
 .filter-title {
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -554,9 +560,11 @@ body {
   margin: 0;
 
 }
-.catalog-filter-group-radio{
+
+.catalog-filter-group-radio {
   margin-right: 70px;
 }
+
 .section-title {
   font-weight: 700;
   font-size: 30px;
@@ -566,9 +574,10 @@ body {
 
 .catalog-filter {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 53px;
 
 }
 
@@ -579,7 +588,7 @@ body {
 .control-label {
   display: grid;
   grid-template-columns: 20px 1fr;
-  gap: 19px;
+  gap: 17px;
   line-height: 24px;
   cursor: pointer;
 }
@@ -661,7 +670,7 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  margin-left:auto;
+  margin-left: auto;
 }
 
 .range-input {
@@ -718,14 +727,14 @@ input[type=number] {
   color: #000000;
   opacity: 0.3;
   position: absolute;
-  top: 12px;
-  right: 22px;
+  top: 14px;
+  right: 18px;
 }
 
 .slider {
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
-  margin-top: 36px;
+  margin-top: 46px;
 }
 
 .slider-bar {
@@ -762,7 +771,7 @@ input[type=number] {
 .filter-button {
   flex-basis: 191px;
   align-self: flex-start;
-  padding-top: 55px;
+  padding-top: 58px;
   margin-left: 70px;
 }
 
@@ -792,7 +801,8 @@ input[type=number] {
   background-color: transparent;
   opacity: 0.3;
 }
-.button-reset[disabled]{
+
+.button-reset[disabled] {
   color: #FFFFFF;
   opacity: 0.1;
   background-color: transparent;
@@ -823,7 +833,7 @@ input[type=number] {
   background-image: url('../images/select.svg');
   background-repeat: no-repeat;
   background-position: 258px center;
-  margin: 0 75px 0 auto;
+  margin: 0 71px 0 auto;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -852,6 +862,7 @@ input[type=number] {
   border-radius: 4px;
   background-repeat: no-repeat;
   background-color: #FFFFFF;
+  margin-right: 2px;
 }
 
 .button-view-active {
@@ -866,10 +877,12 @@ input[type=number] {
   border-color: rgba(104, 162, 202, 1);
   outline: none;
 }
+
 .button-view-icon:active {
   border-color: #000;
 }
-.button-view-active:focus{
+
+.button-view-active:focus {
   border-color: #000;
 }
 
@@ -888,8 +901,8 @@ input[type=number] {
 .list-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
-  row-gap: 20px;
+  column-gap: 18px;
+  row-gap: 18px;
   padding: 0 70px;
   margin-bottom: 40px;
 }
@@ -1026,11 +1039,11 @@ input[type=number] {
 .pagination-list {
   display: flex;
   padding: 0;
-  padding-top: 40px;
+  padding-top: 36px;
   border-top: 1px solid #E6E6E6;
   margin: 0 70px;
   list-style-type: none;
-  margin-bottom: 46px;
+  margin-bottom: 58px;
   gap: 8px;
 }
 
@@ -1076,7 +1089,7 @@ input[type=number] {
   background: #82B3D3 url("../images/subscribe.jpg") no-repeat;
   color: #FFFFFF;
   background-size: cover;
-  padding: 107px 258px 107px 258px;
+  padding: 98px 258px 107px 258px;
 }
 
 .subscribe-catalog {
@@ -1125,7 +1138,8 @@ input[type=number] {
   border-radius: 4px 0 0 4px;
   border: none;
   font-weight: 400;
-  padding: 14px 20px 14px 20px;
+  font-family: inherit;
+  padding: 16px 20px 14px 20px;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
@@ -1155,7 +1169,7 @@ input[type=number] {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  padding: 42px 70px 30px 70px;
+  padding: 41px 70px 30px 73px;
   background-color: #FFFFFF;
 }
 
@@ -1205,6 +1219,10 @@ input[type=number] {
 
 .footer-phone:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-developer-img {
+  padding-top: 4px;
 }
 
 .footer-developer-img:hover path,
