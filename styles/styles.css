@@ -259,22 +259,12 @@ body {
   background: rgba(131, 179, 211, 0.12);
 }
 
-.item-transparent-blue-left {
-  grid-column: 1 / 2;
-}
-
 .advantages-item-light-blue {
-  grid-column: 2 / 3;
   background-color: rgba(131, 179, 211, 0.2);
-}
-
-.item-transparent-blue-right {
-  grid-column: 3 / 4;
 }
 
 .item-blue-last {
   grid-column: 1 / -1;
-  grid-row: 3 / 4;
   background-color: #82B3D3;
   color: #FFFFFF;
 }
@@ -291,6 +281,7 @@ body {
 
 .advantages-item {
   padding: 112px 85px;
+  /* overflow-wrap: break-word; */
 
 }
 
@@ -558,7 +549,7 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-
+  margin-right: auto;
 }
 
 .catalog-filter-group-radio {
@@ -583,14 +574,14 @@ body {
 
 .filter-item {
   padding-bottom: 16px;
-}
 
+}
 .control-label {
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 17px;
+  width: 150px;
   line-height: 24px;
-  cursor: pointer;
 }
 
 .control-label::before {
@@ -670,7 +661,7 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  margin-left: auto;
+
 }
 
 .range-input {
@@ -999,8 +990,8 @@ input[type=number] {
   background-color: rgba(125, 181, 79, 1);
 }
 
-.button-active-green:not[disabled]:hover,
-.button-active-green:not[disabled]:focus {
+.button-active-green:hover,
+.button-active-green:focus {
   background-color: rgba(108, 158, 66, 1);
 }
 
@@ -1061,8 +1052,8 @@ input[type=number] {
   border-radius: 4px;
 }
 
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link:not(.pagination-link-active):hover,
+.pagination-link:not(.pagination-link-active):focus {
   background-color: rgba(104, 162, 202, 1);
 }
 
@@ -1168,6 +1159,7 @@ input[type=number] {
 
 .page-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 41px 70px 30px 73px;
   background-color: #FFFFFF;
@@ -1200,7 +1192,7 @@ input[type=number] {
   fill: rgba(104, 162, 202, 1);
 }
 
-.image-social:active path {
+.social-link:active {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -1225,13 +1217,16 @@ input[type=number] {
   padding-top: 4px;
 }
 
-.footer-developer-img:hover path,
-.footer-developer-img:focus path {
+.footer-developer:hover {
   fill: rgba(117, 97, 87, 1);
 }
 
-.footer-developer-img:active path {
+.footer-developer:active {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+.footer-developer:focus:not(:active) {
+  fill: rgba(117, 97, 87, 1);
 }
 
 /* Modal */
@@ -1477,6 +1472,11 @@ input[type=number] {
   cursor: pointer;
 }
 
+.tooltip-toggle:hover,
+.tooltip-toggle:focus {
+  opacity: 0.6;
+}
+
 .tooltip-text {
   position: absolute;
   top: 40px;
@@ -1492,6 +1492,14 @@ input[type=number] {
   font-weight: 400;
   width: 216px;
   display: none;
+}
+
+@-moz-document url-prefix() {
+  .tooltip-text {
+    position: absolute;
+    top: 40px;
+    left: -55px;
+  }
 }
 
 .tooltip-toggle:hover + .tooltip-text,
