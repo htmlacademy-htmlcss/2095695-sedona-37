@@ -106,6 +106,7 @@ body {
   line-height: 24px;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
+  padding: 20px 16px
 }
 .navigation-link:focus-visible{
   outline: 2px solid rgba(104, 162, 202, 1);
@@ -119,7 +120,7 @@ body {
 }
 
 .navigation-item {
-  padding: 20px 16px;
+  padding: 20px 0;
 }
 
 .button {
@@ -234,12 +235,15 @@ body {
   min-height: 485px;
   min-width: 1200px;
   background:
-    url("../images/welcome-food.svg") no-repeat 0 429px,
-    url("../images/index-background.jpg") no-repeat 0;
-  background-color: rgba(130, 179, 211, 1);
+     url("../images/welcome-food.svg") no-repeat 0 429px,
+     url("../images/index-background.jpg") no-repeat 0;
+  background-color: rgba(130, 179, 211, 0.6);
+
 }
 
 .main-promo img {
+  width: 458;
+  height: 100%;
   padding-top: 50px;
   text-align: center;
 }
@@ -261,6 +265,8 @@ body {
 
 .advantages-image {
   height: 100%;
+  width: 800px;
+  background-size: cover;
 }
 
 .item-blue-first {
@@ -425,14 +431,17 @@ body {
 
 .privilege-item-home {
   background: rgba(131, 179, 211, 0.12) url("../images/home.svg") no-repeat;
+  background-size: 76px 72px;
 }
 
 .privilege-item-food {
   background: rgb(255, 255, 255) url("../images/food.svg") no-repeat;
+  background-size: 75px 70px;
 }
 
 .privilege-item-present {
   background: rgba(131, 179, 211, 0.12) url("../images/present.svg") no-repeat;
+  background-size: 65px 76px ;
 }
 
 .privilege-item {
@@ -686,23 +695,20 @@ body {
 
 }
 
-.range-input {
+.range-input{
   min-width: 143px;
   background: rgba(242, 242, 242, 1);
   border-radius: 4px 0 0 4px;
   border: none;
   box-sizing: border-box;
 }
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button{
   -webkit-appearance: none;
-  margin: 0;
+  appearance: none;
 }
 
-/* Firefox */
-input[type=number] {
+.range-input[type=number] {
   -moz-appearance: textfield;
 }
 
@@ -723,7 +729,7 @@ input[type=number] {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 14px 0 12px 20px;
+  padding: 14px 45px 12px 20px;
   box-sizing: border-box;
   width: 143px;
 }
@@ -946,13 +952,16 @@ input[type=number] {
 .card-img {
   display: block;
   grid-area: image;
-  max-width: 300px;
+  width: 300px;
+  height: 212px;
+  object-fit: contain;
 }
 
 .card-image-link {
   display: block;
   width: 300px;
 }
+
 .card-image-link:focus-visible{
   outline: 3px solid rgba(104, 162, 202, 1);
 }
@@ -1056,6 +1065,7 @@ input[type=number] {
 
 .pagination-list {
   display: flex;
+  flex-wrap:wrap;
   padding: 0;
   padding-top: 38px;
   border-top: 1px solid rgba(230, 230, 230, 1);
@@ -1104,7 +1114,7 @@ input[type=number] {
 }
 
 .subscribe {
-  background: url("../images/subscribe.jpg") no-repeat #82B3D3;
+  background: url("../images/subscribe.jpg") no-repeat rgba(130, 179, 211, 1);
   color:rgba(255, 255, 255, 1);
   background-size: 100% 100%;
   box-sizing: border-box;
@@ -1221,7 +1231,20 @@ input[type=number] {
   display: inline-flex;
 }
 
+.image-vkontakte{
+  width: 25px;
+  height: 15px;
+}
 
+.image-telegram{
+  width: 18px;
+  height: 16px;
+}
+
+.image-youtube{
+  width: 23px;
+  height: 18px;
+}
 .image-social:hover path{
    fill: rgba(104, 162, 202, 1);
 }
@@ -1366,7 +1389,7 @@ input[type=number] {
   font-weight: 700;
   color: rgba(0, 0, 0, 1);
   width: 440px;
-  padding: 12px 20px;
+  padding: 12px 50px 12px 20px;
   font-size: 18px;
   font-family: inherit;
   line-height: 24px;
