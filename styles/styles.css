@@ -1313,9 +1313,9 @@ body {
   background: rgba(242, 242, 242, 0.80);
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
@@ -1405,6 +1405,10 @@ body {
   -moz-appearance: textfield;
 }
 
+.input-field-modal:focus-visible{
+  border-radius: 4px;
+  outline: 3px solid rgba(131, 179, 211, 1);
+}
 .input-number {
   padding: 14px 10px;
   width: 31px;
@@ -1552,7 +1556,7 @@ body {
 }
 
 .tooltip-toggle:hover,
-.tooltip-toggle:focus-visible {
+.tooltip-toggle:focus-visible{
   opacity: 0.6;
 }
 
@@ -1583,7 +1587,6 @@ body {
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus-visible + .tooltip-text {
-  opacity: 0.6;
   display: block;
 }
 
