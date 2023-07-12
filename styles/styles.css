@@ -1395,7 +1395,15 @@ body {
   line-height: 24px;
   border-radius: 4px;
 }
+.input-field-modal::-webkit-outer-spin-button,
+.input-field-modal::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  appearance: none;
+}
 
+.input-field-modal[type=number] {
+  -moz-appearance: textfield;
+}
 
 .input-number {
   padding: 14px 10px;
